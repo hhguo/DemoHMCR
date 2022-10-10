@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Demo Page: Hierarchical Multi-Codebook VQ-VAE based Speech Representation for TTS</title>
+    <title>Demo Page: A Multi-Stage Multi-Codebook VQ-VAE Approach to High-Performance Neural TTS</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="jquery-3.5.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div id="text1">Hierarchical Multi-Codebook VQ-VAE based <br> Speech Representation for TTS
+        <div id="text1">A Multi-Stage Multi-Codebook VQ-VAE Approach to High-Performance Neural TTS
         </div>
         <div id="intro">
             <br>
@@ -26,7 +26,7 @@
     </div>
     <div class="content-container">
         <p>
-            This paper proposes a new TTS framework that learns a hierarchical multi-codebook VQ-VAE based compact speech representation as to the output of the acoustic model and the input of the vocoder. And a multi-scale predictor is proposed to better predict this representation with multiple sub-sequences from the text. The experimental results show that the proposed system significantly outperforms the Mel spectrogram based FastSpeech with a similar model structure but different speech features. Moreover, this representation shows a lower requirement to the modeling capability, which can still perform well using only the 4-layer 128-dim CNN as the encoder and decoder. Finally, ablation studies validate that, while keep sufficient compactness, improving completeness with multi-head vector-quantization and hierarchical representation are both helpful to enhance TTS.
+            We propose a Multi-Stage, Multi-Codebook (MSMC) approach to high performance neural TTS synthesis. A vector-quantized, variational autoencoder (VQ-VAE) based feature analyzer is used to encode Mel spectrograms of speech training data by down-sampling progressively in multiple stages into MSMC Representations (MSMCRs) with different time resolutions, and quantizing them with multiple VQ codebooks, respectively. Multi-stage predictors are trained to map the input text sequence to MSMCRs progressively by minimizing a combined loss of the reconstruction Mean Square Error (MSE) and “triplet loss”. In synthesis, the neural vocoder converts the predicted MSMCRs into final speech waveforms. The proposed approach is trained and tested with an English TTS database of 16 hours by a female speaker. The proposed TTS achieves an MOS score of 4.41, which outperforms the baseline with an MOS of 3.62. Compact versions of the proposed TTS with much less parameters can still preserve high MOS scores. Ablation studies show that both multiple stages and multiple codebooks are effective for achieving high TTS performance.    
         </p>
         <br />
     </div>
